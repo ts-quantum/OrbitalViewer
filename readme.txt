@@ -61,3 +61,6 @@ The application is organized into five specialized modules:
 ## Usage
 
     python3 orbitals2.py
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
