@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1014</width>
+    <height>721</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Orbitals</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1011</width>
+      <height>681</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>3</number>
+    </property>
+    <widget class="QWidget" name="tab_1">
+     <attribute name="title">
+      <string>Spherical Harmonics</string>
+     </attribute>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>m (magnetic)</string>
+      </property>
+     </widget>
+     <widget class="MplWidget" name="plot_widget2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>10</y>
+        <width>411</width>
+        <height>391</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="MplWidget2" name="plot_widget3" native="true">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>420</y>
+        <width>961</width>
+        <height>201</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="colorBox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>40</y>
+        <width>104</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="currentText">
+       <string/>
+      </property>
+      <property name="currentIndex">
+       <number>-1</number>
+      </property>
+     </widget>
+     <widget class="MplWidget" name="plot_widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>10</y>
+        <width>391</width>
+        <height>391</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="Input_l">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="Input_m">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>60</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>color</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="plotButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>210</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Plot</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>l (angular mom.)</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Orbitals</string>
+     </attribute>
+     <widget class="MplWidget_2d" name="orbital_widget_2d" native="true">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>10</y>
+        <width>491</width>
+        <height>441</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="MplWidget" name="orbital_widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>431</width>
+        <height>441</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Plot_Orbital">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>480</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Plot</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>480</y>
+        <width>571</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Parameters</string>
+      </property>
+      <widget class="QLineEdit" name="Edit_l">
+       <property name="geometry">
+        <rect>
+         <x>147</x>
+         <y>51</y>
+         <width>125</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Edit_n">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>51</y>
+         <width>125</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Edit_m">
+       <property name="geometry">
+        <rect>
+         <x>282</x>
+         <y>51</y>
+         <width>125</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Edit_Points">
+       <property name="geometry">
+        <rect>
+         <x>417</x>
+         <y>51</y>
+         <width>125</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>40</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>541</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>n (principal)</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>l (angular momentum)</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>m (magnetic)</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>3D Grid Points</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_wedge">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>261</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>cut out wedge</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="Export_Orbital">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>530</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Povray Export</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Hybridization</string>
+     </attribute>
+     <widget class="MplWidget" name="hyb_widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>10</y>
+        <width>491</width>
+        <height>361</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="Select_Hyb">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Plot_Hyb">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>80</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Plot</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="Edit_N">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>160</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>40</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>135</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>3D Grid Points</string>
+      </property>
+     </widget>
+     <widget class="MplWidget2" name="hyb_widget_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>390</y>
+        <width>961</width>
+        <height>241</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hyb_export">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>200</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Povray Export</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>Oscillation</string>
+     </attribute>
+     <widget class="MplWidget" name="osc_widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>961</width>
+        <height>391</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>470</y>
+        <width>751</width>
+        <height>98</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Parameters</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="1" column="3">
+        <widget class="QLineEdit" name="Edit_Points_osc">
+         <property name="text">
+          <string>40</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="4">
+        <widget class="QLineEdit" name="Edit_Time_osc">
+         <property name="text">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="Edit_n_osc">
+         <property name="text">
+          <string>2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="4">
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>n (principal)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>l (angular momentum)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string>m (magnetic)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_12">
+           <property name="text">
+            <string>3D Grid Points</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLineEdit" name="Edit_m_osc">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="Edit_l_osc">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QLabel" name="label_13">
+         <property name="text">
+          <string>Time Step</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="5">
+        <widget class="QLabel" name="label_21">
+         <property name="text">
+          <string>N frames @25 fps</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="5">
+        <widget class="QLineEdit" name="Edit_frames_osc">
+         <property name="text">
+          <string>50</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QComboBox" name="colorBox_osc">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>570</y>
+        <width>104</width>
+        <height>26</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>450</y>
+        <width>110</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="play_osc">
+         <property name="text">
+          <string>Play</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>play.png</normaloff>play.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pause_osc">
+         <property name="text">
+          <string>Pause</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>pause.png</normaloff>pause.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="stop_osc">
+         <property name="text">
+          <string>Stop</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>stop.png</normaloff>stop.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>580</y>
+        <width>277</width>
+        <height>36</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QPushButton" name="save_osc">
+         <property name="text">
+          <string>Save</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>save.png</normaloff>save.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="pbar_osc">
+         <property name="styleSheet">
+          <string notr="true">
+            QProgressBar {
+                border: 2px solid grey;
+                border-radius: 5px;
+                text-align: center;
+            }
+            QProgressBar::chunk {
+                background-color: #05B8CC; /* Ein kräftiges Blau/Türkis */
+                width: 20px;
+            }
+</string>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QProgressBar" name="pbar_image_osc">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>440</y>
+        <width>281</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">            QProgressBar {
+                border: 2px solid grey;
+                border-radius: 5px;
+                text-align: center;
+            }
+            QProgressBar::chunk {
+                background-color: rgb(100,100,100); 
+                width: 20px;
+            }</string>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_save_osc">
+      <property name="geometry">
+       <rect>
+        <x>407</x>
+        <y>590</y>
+        <width>301</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>Transition</string>
+     </attribute>
+     <widget class="MplWidget" name="trans_widget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>20</y>
+        <width>651</width>
+        <height>541</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>270</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>State   1   --&gt;         2</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>300</y>
+        <width>291</width>
+        <height>85</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_16">
+         <property name="text">
+          <string>n (principal)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="Edit_n1">
+         <property name="text">
+          <string>2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLineEdit" name="Edit_n2">
+         <property name="text">
+          <string>2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_17">
+         <property name="text">
+          <string>l (angular momentum)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="Edit_l1">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLineEdit" name="Edit_l2">
+         <property name="text">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_18">
+         <property name="text">
+          <string>m (magnetic)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="Edit_m1">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLineEdit" name="Edit_m2">
+         <property name="text">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>100</y>
+        <width>262</width>
+        <height>104</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="Edit_Points_trans">
+         <property name="text">
+          <string>40</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_15">
+         <property name="text">
+          <string>Time Step</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_14">
+         <property name="text">
+          <string>3D Grid Points</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="Edit_Time_trans">
+         <property name="text">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLineEdit" name="Edit_frames_trans">
+         <property name="text">
+          <string>50</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_20">
+         <property name="text">
+          <string>N frames @25 fps</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>282</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="play_trans">
+         <property name="text">
+          <string>Play</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>play.png</normaloff>play.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pause_trans">
+         <property name="text">
+          <string>Pause</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>pause.png</normaloff>pause.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="stop_trans">
+         <property name="text">
+          <string>Stop</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>stop.png</normaloff>stop.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>450</y>
+        <width>188</width>
+        <height>87</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QPushButton" name="save_trans">
+         <property name="text">
+          <string>Save</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>save.png</normaloff>save.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_save_trans">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="pbar_trans">
+         <property name="styleSheet">
+          <string notr="true">
+            QProgressBar {
+                border: 2px solid grey;
+                border-radius: 5px;
+                text-align: center;
+            }
+            QProgressBar::chunk {
+                background-color: #05B8CC; /* Ein kräftiges Blau/Türkis */
+                width: 20px;
+            }
+</string>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QProgressBar" name="pbar_image_trans">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>570</y>
+        <width>641</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">            QProgressBar {
+                border: 2px solid grey;
+                border-radius: 5px;
+                text-align: center;
+            }
+            QProgressBar::chunk {
+                background-color: rgb(100,100,100); 
+                width: 20px;
+            }</string>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1014</width>
+     <height>33</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MplWidget</class>
+   <extends>QWidget</extends>
+   <header>./modules/mpl_widget_3d</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MplWidget2</class>
+   <extends>QWidget</extends>
+   <header>./modules/mpl_widget_3d_</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MplWidget_2d</class>
+   <extends>QWidget</extends>
+   <header>./modules/mpl_widget_2d</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
