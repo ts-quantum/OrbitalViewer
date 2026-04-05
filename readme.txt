@@ -40,7 +40,9 @@ The application is organized into five specialized modules:
 │   ├── hybrids.py        # Hybridization matrices and logic
 │   ├── window.ui         # Qt Designer UI file
 │   └── [Header files]    # Matplotlib widget configurations
-│   └── [icon files]    # icons for pushButtons
+│   └── [icon files]      # icons for pushButtons
+├── /screenshots          # 
+    ├── ...               # examples
 
 ## Installation
 
