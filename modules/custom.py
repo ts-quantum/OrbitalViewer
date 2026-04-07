@@ -9,8 +9,8 @@ from matplotlib.colors import LightSource
 from matplotlib.animation import FuncAnimation
 import matplotlib as mpl
 
-from hybrids import *
-from basis import *
+from modules.hybrids import *
+from modules.basis import *
 
 # Spherical Harmonics:
 

@@ -9,8 +9,18 @@ from matplotlib.gridspec import GridSpec
 from PyQt5.QtCore import * 
 import threading
 
-sys.path.insert(1,'./modules')
-from custom import *
+from modules.custom import *
+from modules.window import Ui_MainWindow
+
+"""
+
+python3.13 -m nuitka --standalone --macos-create-app-bundle --macos-app-name="OrbitalViewer" --enable-plugin=pyqt5 --enable-plugin=numpy --enable-plugin=matplotlib --include-package=modules --include-package=skimage --nofollow-import-to=sympy.polys.polyquinticconst --nofollow-import-to=sympy.plotting --nofollow-import-to=sympy.interactive --jobs=8 --output-dir=dist --remove-output orbitals2.py
+
+python3.13 -m nuitka --standalone --macos-create-app-bundle --macos-app-name="OrbitalViewer" --enable-plugin=pyqt5 --enable-plugin=numpy --enable-plugin=matplotlib --enable-plugin=anti-bloat --include-package=modules --include-package=skimage --include-package=sympy --nofollow-import-to=sympy.plotting --nofollow-import-to=sympy.interactive --nofollow-import-to=sympy.testing --jobs=8 --output-dir=dist --remove-output orbitals2.py
+
+python -m pip install pipdeptree
+pipdeptree -p orbitals2.py
+"""
 
 class ColormapDelegate(QStyledItemDelegate):
     def paint(self, painter, option, index):
@@ -53,7 +63,7 @@ class ColormapDelegate(QStyledItemDelegate):
             
         painter.restore()
 
-class MainWindow(QtWidgets.QMainWindow):
+class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     # define Signals for the interaction between different Threads
     # (GUI and background Thread)
     # to control pbar status and to emit error messages to label
@@ -65,7 +75,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         # 1. Load ui Files
-        uic.loadUi("./modules/window.ui", self)
+        self.setupUi(self)
 # Transition
         self.play_trans.clicked.connect(self.play_trans_clicked)
         self.stop_trans.clicked.connect(self.stop_trans_clicked)

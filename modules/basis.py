@@ -1,7 +1,7 @@
 from sympy.physics.hydrogen import R_nl
 from sympy import symbols, lambdify, Matrix, Znm
 import numpy as np
-from hybrids import *
+from modules.hybrids import *
 
 
 r_sym, theta_sym, phi_sym = symbols('r theta phi')
