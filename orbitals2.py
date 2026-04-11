@@ -19,6 +19,8 @@ from modules.window import Ui_MainWindow
 """
 macOS:
 python3.13 -m nuitka --standalone --macos-create-app-bundle --macos-app-name="OrbitalViewer" --enable-plugin=pyqt5 --enable-plugin=numpy --enable-plugin=matplotlib --enable-plugin=anti-bloat --include-package=modules --include-package-data=modules --nofollow-import-to=pytest --nofollow-import-to=setuptools --jobs=8 --output-dir=dist --remove-output orbitals2.py
+Linux:
+python3 -m nuitka --standalone --enable-plugin=pyqt5 --enable-plugin=numpy --enable-plugin=matplotlib --enable-plugin=anti-bloat --include-package=modules --include-package-data=modules --nofollow-import-to=pytest --nofollow-import-to=setuptools --jobs=8 --output-dir=dist --remove-output orbitals2.py
 
 """
 
