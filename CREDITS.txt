@@ -1,0 +1,18 @@
+OrbitalViewer - Credits & Licenses
+
+This application is provided as open-source software. 
+It bundles several third-party libraries, each governed by their own licenses:
+
+1. Python (PSF License) - https://python.org
+2. PyQt5 (GNU GPL v3) - https://riverbankcomputing.com
+3. NumPy (BSD License) - https://numpy.org
+4. SciPy (BSD License) - https://scipy.org
+5. Matplotlib (PSF/BSD compatible) - https://matplotlib.org
+6. SymPy (BSD License) - https://sympy.org
+7. Scikit-Image (BSD License) - https://scikit-image.org
+
+The source code for this application is available at: 
+https://github.com/ts-quantum/OrbitalViewer
+
+In accordance with the GNU GPL v3 (PyQt5), this software is distributed 
+under the same license terms.
