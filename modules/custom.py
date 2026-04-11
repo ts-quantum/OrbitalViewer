@@ -9,9 +9,6 @@ from matplotlib.colors import LightSource
 from matplotlib.animation import FuncAnimation
 import matplotlib as mpl
 
-from modules.hybrids import *
-from modules.basis import *
-
 # Spherical Harmonics:
 
 def plot( widget,ax, el, m, color):
@@ -534,7 +531,6 @@ def plot_osc_offline(export_fig,ax1,ax2,p):
     ani = FuncAnimation(export_fig, update, frames=N, interval=25, repeat=False)
     export_fig.canvas.draw()
     return ani
-
 
 # Transition
 def plot_trans(pbar,widget, ax, n1, l1, m1, n2, l2, m2, n_points, N, T):

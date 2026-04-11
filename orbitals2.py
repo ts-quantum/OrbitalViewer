@@ -1,25 +1,24 @@
 import sys, os
-from PyQt5 import QtWidgets, uic
-from PyQt5 import *
+from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QStyledItemDelegate, QStyle, QFileDialog
 from PyQt5.QtGui import QColor, QLinearGradient, QBrush
-from PyQt5.QtCore import Qt, QRect
+from PyQt5.QtCore import Qt, QRect, pyqtSignal
+import matplotlib
+matplotlib.use('Qt5Agg')
 import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
-from PyQt5.QtCore import * 
 import threading
 
-from modules.custom import *
+from modules.custom import plot, plot2, plot_2d_grid, plot_orbital
+from modules.custom import plot_hyb_orb, plot_osc, plot_osc_offline, plot_trans, plot_trans_offline
+from modules.custom import export_to_pov_mesh2_hyb, export_to_pov_mesh2_orb
+from modules.basis import get_psi_num
+
 from modules.window import Ui_MainWindow
 
 """
+python3.13 -m nuitka --standalone --macos-create-app-bundle --macos-app-name="OrbitalViewer" --enable-plugin=pyqt5 --enable-plugin=numpy --enable-plugin=matplotlib --enable-plugin=anti-bloat --include-package=modules --include-package-data=modules --nofollow-import-to=pytest --nofollow-import-to=setuptools --jobs=8 --output-dir=dist --remove-output orbitals2.py
 
-python3.13 -m nuitka --standalone --macos-create-app-bundle --macos-app-name="OrbitalViewer" --enable-plugin=pyqt5 --enable-plugin=numpy --enable-plugin=matplotlib --include-package=modules --include-package=skimage --nofollow-import-to=sympy.polys.polyquinticconst --nofollow-import-to=sympy.plotting --nofollow-import-to=sympy.interactive --jobs=8 --output-dir=dist --remove-output orbitals2.py
-
-python3.13 -m nuitka --standalone --macos-create-app-bundle --macos-app-name="OrbitalViewer" --enable-plugin=pyqt5 --enable-plugin=numpy --enable-plugin=matplotlib --enable-plugin=anti-bloat --include-package=modules --include-package=skimage --include-package=sympy --nofollow-import-to=sympy.plotting --nofollow-import-to=sympy.interactive --nofollow-import-to=sympy.testing --jobs=8 --output-dir=dist --remove-output orbitals2.py
-
-python -m pip install pipdeptree
-pipdeptree -p orbitals2.py
 """
 
 class ColormapDelegate(QStyledItemDelegate):

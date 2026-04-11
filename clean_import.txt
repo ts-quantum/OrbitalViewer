@@ -1,0 +1,138 @@
+DATEI                          | IMPORT-TYP      | MODULE
+--------------------------------------------------------------------------------
+clean_import.py                | Standard      | os
+clean_import.py                | Standard      | ast
+orbitals2.py                   | Standard      | sys, os
+orbitals2.py                   | From-Import   | from PyQt5 import QtWidgets
+orbitals2.py                   | From-Import   | from PyQt5.QtWidgets import QApplication, QStyledItemDelegate, QStyle, QFileDialog
+orbitals2.py                   | From-Import   | from PyQt5.QtGui import QColor, QLinearGradient, QBrush
+orbitals2.py                   | From-Import   | from PyQt5.QtCore import Qt, QRect, pyqtSignal
+orbitals2.py                   | Standard      | matplotlib.pyplot
+orbitals2.py                   | From-Import   | from matplotlib.gridspec import GridSpec
+orbitals2.py                   | Standard      | threading
+orbitals2.py                   | From-Import   | from modules.custom import plot, plot2, plot_2d_grid, plot_orbital
+orbitals2.py                   | From-Import   | from modules.custom import plot_hyb_orb, plot_osc, plot_osc_offline, plot_trans, plot_trans_offline
+orbitals2.py                   | From-Import   | from modules.custom import export_to_pov_mesh2_hyb, export_to_pov_mesh2_orb
+orbitals2.py                   | From-Import   | from modules.basis import get_psi_num
+orbitals2.py                   | From-Import   | from modules.window import Ui_MainWindow
+orbitals2.py                   | From-Import   | from matplotlib.figure import Figure
+orbitals2.py                   | From-Import   | from matplotlib.backends.backend_agg import FigureCanvasAgg
+orbitals2.py                   | From-Import   | from matplotlib.figure import Figure
+orbitals2.py                   | From-Import   | from matplotlib.backends.backend_agg import FigureCanvasAgg
+test4.py                       | Standard      | sys
+test4.py                       | From-Import   | from PyQt5.QtWidgets import QDialog, QApplication, QPushButton, QVBoxLayout
+test4.py                       | From-Import   | from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
+test4.py                       | From-Import   | from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT
+test4.py                       | Standard      | matplotlib.pyplot
+test4.py                       | Standard      | numpy
+test4.py                       | From-Import   | from sympy.physics.hydrogen import R_nl
+test4.py                       | From-Import   | from sympy import symbols, lambdify
+test4.py                       | From-Import   | from scipy.special import sph_harm_y
+test4.py                       | From-Import   | from skimage import measure
+test4.py                       | From-Import   | from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+test4.py                       | From-Import   | from matplotlib.colors import LightSource
+test4.py                       | From-Import   | from matplotlib.animation import FuncAnimation
+test1.py                       | Standard      | sys
+test1.py                       | From-Import   | from PyQt5.QtWidgets import QDialog, QApplication, QPushButton, QVBoxLayout
+test1.py                       | From-Import   | from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
+test1.py                       | From-Import   | from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT
+test1.py                       | Standard      | matplotlib.pyplot
+test1.py                       | Standard      | numpy
+test1.py                       | From-Import   | from sympy.physics.hydrogen import R_nl
+test1.py                       | From-Import   | from sympy import symbols, lambdify
+test1.py                       | From-Import   | from scipy.special import sph_harm
+test1.py                       | From-Import   | from skimage import measure
+test1.py                       | From-Import   | from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+test1.py                       | From-Import   | from matplotlib.colors import LightSource
+test2.py                       | Standard      | sys
+test2.py                       | From-Import   | from PyQt5.QtWidgets import QDialog, QApplication, QPushButton, QVBoxLayout
+test2.py                       | From-Import   | from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
+test2.py                       | From-Import   | from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT
+test2.py                       | Standard      | matplotlib.pyplot
+test2.py                       | Standard      | threading
+test2.py                       | Standard      | numpy
+test2.py                       | From-Import   | from sympy.physics.hydrogen import R_nl
+test2.py                       | From-Import   | from sympy import symbols, lambdify
+test2.py                       | From-Import   | from scipy.special import sph_harm
+test2.py                       | From-Import   | from skimage import measure
+test2.py                       | From-Import   | from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+test2.py                       | From-Import   | from matplotlib.colors import LightSource
+test2.py                       | From-Import   | from matplotlib.animation import FuncAnimation
+test3b.py                      | Standard      | sys
+test3b.py                      | From-Import   | from PyQt5.QtWidgets import QDialog, QApplication, QPushButton, QVBoxLayout
+test3b.py                      | From-Import   | from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
+test3b.py                      | From-Import   | from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT
+test3b.py                      | Standard      | matplotlib.pyplot
+test3b.py                      | Standard      | numpy
+test3b.py                      | From-Import   | from sympy.physics.hydrogen import R_nl
+test3b.py                      | From-Import   | from sympy import symbols, lambdify
+test3b.py                      | From-Import   | from scipy.special import sph_harm_y
+test3b.py                      | From-Import   | from skimage import measure
+test3b.py                      | From-Import   | from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+test3b.py                      | From-Import   | from matplotlib.colors import LightSource
+test3b.py                      | From-Import   | from matplotlib.animation import FuncAnimation
+test3b.py                      | From-Import   | from matplotlib import cm
+test2b.py                      | Standard      | sys
+test2b.py                      | From-Import   | from PyQt5.QtWidgets import QDialog, QApplication, QPushButton, QVBoxLayout, QProgressBar
+[91mtest2b.py                      | WILDCARD (*)  | from PyQt5.QtWidgets import *[0m
+[91mtest2b.py                      | WILDCARD (*)  | from PyQt5.QtGui import *[0m
+[91mtest2b.py                      | WILDCARD (*)  | from PyQt5.QtCore import *[0m
+test2b.py                      | From-Import   | from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
+test2b.py                      | From-Import   | from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT
+test2b.py                      | Standard      | matplotlib.pyplot
+test2b.py                      | Standard      | threading
+test2b.py                      | Standard      | numpy
+test2b.py                      | From-Import   | from sympy.physics.hydrogen import R_nl
+test2b.py                      | From-Import   | from sympy import symbols, lambdify
+test2b.py                      | From-Import   | from scipy.special import sph_harm_y
+test2b.py                      | From-Import   | from skimage import measure
+test2b.py                      | From-Import   | from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+test2b.py                      | From-Import   | from matplotlib.colors import LightSource
+test2b.py                      | From-Import   | from matplotlib.animation import FuncAnimation
+test3.py                       | Standard      | sys
+test3.py                       | From-Import   | from PyQt5.QtWidgets import QDialog, QApplication, QPushButton, QVBoxLayout
+test3.py                       | From-Import   | from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
+test3.py                       | From-Import   | from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT
+test3.py                       | Standard      | matplotlib.pyplot
+test3.py                       | Standard      | numpy
+test3.py                       | From-Import   | from scipy.special import sph_harm_y
+test3.py                       | From-Import   | from skimage import measure
+test3.py                       | From-Import   | from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+test3.py                       | From-Import   | from matplotlib.colors import LightSource
+test3.py                       | From-Import   | from matplotlib.animation import FuncAnimation
+basis.py                       | From-Import   | from sympy.physics.hydrogen import R_nl
+basis.py                       | From-Import   | from sympy import symbols, lambdify, Matrix, Znm
+basis.py                       | Standard      | numpy
+basis.py                       | From-Import   | from modules.hybrids import hybrids
+mpl_widget_3d_.py              | From-Import   | from PyQt5.QtWidgets import QWidget, QVBoxLayout
+mpl_widget_3d_.py              | From-Import   | from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
+mpl_widget_3d_.py              | From-Import   | from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT
+mpl_widget_3d_.py              | From-Import   | from matplotlib.figure import Figure
+mpl_widget_3d_.py              | From-Import   | from mpl_toolkits.mplot3d import Axes3D
+mpl_widget_3d_.py              | From-Import   | from PyQt5 import QtCore
+custom.py                      | Standard      | numpy
+custom.py                      | Standard      | matplotlib.pyplot
+custom.py                      | From-Import   | from scipy.special import sph_harm_y
+custom.py                      | From-Import   | from sympy.physics.hydrogen import R_nl
+custom.py                      | From-Import   | from sympy import symbols, lambdify
+custom.py                      | From-Import   | from skimage import measure
+custom.py                      | From-Import   | from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+custom.py                      | From-Import   | from matplotlib.colors import LightSource
+custom.py                      | From-Import   | from matplotlib.animation import FuncAnimation
+custom.py                      | Standard      | matplotlib
+window.py                      | From-Import   | from PyQt5 import QtCore, QtGui, QtWidgets
+window.py                      | From-Import   | from modules.mpl_widget_2d import MplWidget_2d
+window.py                      | From-Import   | from modules.mpl_widget_3d import MplWidget
+window.py                      | From-Import   | from modules.mpl_widget_3d_ import MplWidget2
+mpl_widget_2d.py               | From-Import   | from PyQt5.QtWidgets import QWidget, QVBoxLayout
+mpl_widget_2d.py               | From-Import   | from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
+mpl_widget_2d.py               | From-Import   | from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT
+mpl_widget_2d.py               | From-Import   | from matplotlib.figure import Figure
+mpl_widget_2d.py               | From-Import   | from PyQt5 import QtCore
+mpl_widget_3d.py               | From-Import   | from PyQt5.QtWidgets import QWidget, QVBoxLayout
+mpl_widget_3d.py               | From-Import   | from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
+mpl_widget_3d.py               | From-Import   | from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT
+mpl_widget_3d.py               | From-Import   | from matplotlib.figure import Figure
+mpl_widget_3d.py               | From-Import   | from mpl_toolkits.mplot3d import Axes3D
+mpl_widget_3d.py               | From-Import   | from PyQt5 import QtCore
+hybrids.py                     | Standard      | numpy

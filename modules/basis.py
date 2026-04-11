@@ -1,8 +1,7 @@
 from sympy.physics.hydrogen import R_nl
 from sympy import symbols, lambdify, Matrix, Znm
 import numpy as np
-from modules.hybrids import *
-
+from modules.hybrids import hybrids
 
 r_sym, theta_sym, phi_sym = symbols('r theta phi')
 # 4. Define Orbitals (Note: SciPy order is m, l, phi, theta)
